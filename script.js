@@ -29,7 +29,7 @@ addBtn.addEventListener('click', function () {
     const expense = { category, amount, date };
     expenses.push(expense);
 
-    if (category === 'Expense') {
+    if (category === 'Expense'||category==='Food'||category==='College Fee'||category==='Rent'||category==='Shopping'||category==='Cool Drinks') {
         totalAmount -= amount;
     } else {
         totalAmount += amount;
