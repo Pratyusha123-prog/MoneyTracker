@@ -2,41 +2,44 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     background-color: skyblue;
+    padding: 0;
 }
 
 h1, h2 {
     text-align: center;
+    margin: 10px 0;
 }
 
 .input-section {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column; /* Stack inputs on smaller screens */
+    gap: 10px;
     padding: 10px;
+    margin: 10px;
 }
 
 .input-section label {
     font-weight: bold;
-    margin-right: 10px;
+    margin-bottom: 5px;
 }
 
-.input-section input[type="number"], .input-section input[type="date"] {
-    padding: 5px;
-    margin-right: 10px;
+.input-section input, .input-section select, .input-section button {
+    width: 100%; /* Make inputs and buttons stretch */
+    padding: 8px;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 .input-section button {
-    padding: 5px 10px;
     background-color: rgb(238, 9, 9);
     color: white;
-    border: none;
-    border-radius: 4px;
     cursor: pointer;
 }
 
 .expenses-list {
-    margin: 20px;
+    margin: 10px;
+    overflow-x: auto; /* Allow horizontal scrolling on smaller devices */
 }
 
 table {
@@ -60,10 +63,25 @@ tfoot td {
 }
 
 .delete-btn {
-    padding: 5px 10px;
     background-color: rgb(238, 9, 9);
     color: white;
+    padding: 5px 10px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .input-section {
+        padding: 5px;
+    }
+
+    h1, h2 {
+        font-size: 1.5em;
+    }
+
+    th, td {
+        font-size: 0.9em;
+    }
 }
