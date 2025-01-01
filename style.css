@@ -72,10 +72,6 @@ tfoot td {
 }
 
 /* Responsive design */
-@media (max-width: 600px) {
-    .input-section {
-        padding: 5px;
-    }
 
     h1, h2 {
         font-size: 1.5em;
